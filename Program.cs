@@ -29,6 +29,9 @@ public class Program
         // ClassesAndObjectsExample.DisplayClassesAndObjects(); // Call the method to display classes and objects
 
         // For Inheritance, uncomment this code
-        InheritanceExample.DisplayInheritanceExample(); // Call the method to demonstrate inheritance
+        // InheritanceExample.DisplayInheritanceExample(); // Call the method to demonstrate inheritance
+
+        // For Abstraction and Interface, uncomment this code
+        // AbstractionAndInterfaceExample.DisplayAbstractionAndInterface(); // Call the method to demonstrate abstraction and interface
     }
 }
