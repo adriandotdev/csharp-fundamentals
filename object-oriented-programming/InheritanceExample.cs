@@ -57,22 +57,33 @@ public class Employee
 public class SoftwareEngineer : Employee
 {
     private static readonly string POSITION = "Software Engineer";
-    private readonly string[] programmingLanguages;
+    private readonly List<string> _techStacks;
 
-    public SoftwareEngineer(string name, decimal salary, string[] programmingLanguages) : base(name, POSITION, salary)
+    public SoftwareEngineer(string name, decimal salary, List<string> techStacks) : base(name, POSITION, salary)
     {
-        this.programmingLanguages = programmingLanguages;
+        this._techStacks = techStacks;
     }
+
 
     public override void Work()
     {
         base.Work();
-        Console.WriteLine($"{Name} is proficient in: {string.Join(", ", programmingLanguages)}.");
+        Console.WriteLine($"{Name} is proficient in: {string.Join(", ", _techStacks)}.");
+    }
+
+    public void AddTechStack(string techStack)
+    {
+        if (string.IsNullOrWhiteSpace(techStack))
+        {
+            throw new ArgumentException("Tech stack cannot be null or empty.");
+        }
+
+        this._techStacks.Add(techStack);
     }
 
     public override string ToString()
     {
-        return base.ToString() + $", Programming Languages: {string.Join(", ", programmingLanguages)}";
+        return base.ToString() + $", Programming Languages: {string.Join(", ", _techStacks)}";
     }
 }
 
@@ -85,6 +96,7 @@ public class InheritanceExample
         Employee employee = new SoftwareEngineer("John", 80_000, ["JavaScript", "C#", "Python"]);
         employee.Work();
         Console.WriteLine(employee.ToString());
+        ((SoftwareEngineer)employee).AddTechStack("TypeScript");
         employee.Position = "Senior Software Engineer"; // Change position
         employee.Salary = 90_000; // Change salary
         Console.WriteLine(employee.ToString());
