@@ -1,0 +1,35 @@
+# Build results
+bin/
+obj/
+
+# Visual Studio files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code settings
+.vscode/
+
+# Auto-generated files
+*.log
+
+# NuGet packages
+*.nupkg
+*.snupkg
+# If you use packages folder instead of global packages
+packages/
+
+# Rider IDE
+.idea/
+
+# Dotnet artifacts
+*.dll
+*.exe
+*.pdb
+*.cache
+*.dbmdl
+
+# OS-specific
+.DS_Store
+Thumbs.db
