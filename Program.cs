@@ -33,5 +33,8 @@ public class Program
 
         // For Abstraction and Interface, uncomment this code
         // AbstractionAndInterfaceExample.DisplayAbstractionAndInterface(); // Call the method to demonstrate abstraction and interface
+
+        // For LINQ Example, uncomment this code
+        LINQ.DisplayLINQExample(); // Call the method to demonstrate LINQ
     }
 }
