@@ -1,10 +1,9 @@
-﻿using Fundamentals;
-using ObjectOrientedProgramming;
+﻿
 public class Program
 {
     public static void Main(string[] args)
     {
-        // For DataTypes.cs, uncomment this code
+     // For DataTypes.cs, uncomment this code
         // DataTypes.DisplaySampleDataTypes(); // Call the method to display sample data types
 
         // For Methods.cs, uncomment this code
@@ -33,5 +32,8 @@ public class Program
 
         // For Abstraction and Interface, uncomment this code
         // AbstractionAndInterfaceExample.DisplayAbstractionAndInterface(); // Call the method to demonstrate abstraction and interface
+
+        // For LINQ Example, uncomment this code
+        // LINQ.DisplayLINQExample(); // Call the method to demonstrate LINQ
     }
 }

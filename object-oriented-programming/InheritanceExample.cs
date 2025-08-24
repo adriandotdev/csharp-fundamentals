@@ -10,7 +10,7 @@ public class Employee
     {
         Name = name;
         Position = position;
-        Salary = salary; 
+        Salary = salary;
     }
 
     public decimal Salary
@@ -45,12 +45,27 @@ public class Employee
 
     public virtual void Work()
     {
-        Console.WriteLine($"{Name} is working as a {Position}.");    
+        Console.WriteLine($"{Name} is working as a {Position}.");
     }
 
     public override string ToString()
     {
         return $"Name: {Name}, Position: {Position}, Salary: {Salary:C}";
+    }
+
+    public override bool Equals(object? obj)
+    {
+        if (obj is Employee other)
+        {
+            return Name == other.Name && Position == other.Position && Salary == other.Salary;
+        }
+
+        return false;
+    }
+
+    public override int GetHashCode()
+    {
+        return Name.GetHashCode() + Position.GetHashCode() + Salary.GetHashCode();
     }
 }
 
